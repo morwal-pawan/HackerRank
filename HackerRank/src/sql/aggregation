@@ -14,3 +14,18 @@ where DISTRICT = 'California';
 
 Select avg(Population) from CITY
 where DISTRICT = 'California';
+
+// Average Population
+
+ select Case 
+ when( avg(POPULATION) - Floor(avg(POPULATION)))>0.5
+ then (avg(POPULATION)+1)
+ else (Floor(avg(POPULATION)))
+ end 
+ from CITY;
+ 
+ or
+ 
+ select if( (avg(POPULATION) - Floor(avg(POPULATION)))>0.5,
+ (avg(POPULATION)+1),Floor(avg(POPULATION)))
+ from CITY;
