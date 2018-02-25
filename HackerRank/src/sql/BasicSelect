@@ -30,6 +30,6 @@ where COUNTRYCODE = 'JPN';
 select Name from City
 WHERE CountryCode ='JPN';
 
+// Weather Observation Station 1
 
-
-
+select CITY, STATE from STATION;
