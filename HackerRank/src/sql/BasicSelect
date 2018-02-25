@@ -90,3 +90,9 @@ or
 select  DISTINCT city from station 
 where 
 left(city,1) not regexp '[aieou]' or right(city,1) not regexp '[aieou]'
+
+// Weather Observation Station 12
+
+select distinct city from station
+where
+CITY RLIKE '^[^aieou]' and CITY RLIKE '[^aieou]$';
