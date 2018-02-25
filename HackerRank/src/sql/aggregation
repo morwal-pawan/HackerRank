@@ -1,0 +1,4 @@
+// Revising Aggregations - The Count Function
+
+select COUNT(NAME) from CITY
+where POPULATION > 100000;
