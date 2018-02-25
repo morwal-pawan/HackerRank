@@ -61,4 +61,10 @@ SELECT DISTINCT CITY FROM STATION
 WHERE
 RIGHT(CITY,1) Rlike '[aeiou]';
 
+// Weather Observation Station 8
+
+SELECT DISTINCT CITY FROM STATION 
+WHERE
+CITY RLIKE '^[aieou].*[aieou]$';
+
 
