@@ -9,3 +9,7 @@ where COUNTRYCODE ='USA' and POPULATION >100000;
 select NAME from CITY 
 where 
 POPULATION > 120000 and COUNTRYCODE  ='USA';
+
+// Select All
+
+select * from CITY;
