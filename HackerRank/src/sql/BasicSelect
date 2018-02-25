@@ -33,3 +33,8 @@ WHERE CountryCode ='JPN';
 // Weather Observation Station 1
 
 select CITY, STATE from STATION;
+
+// Weather Observation Station 3
+
+select DISTINCT CITY From STATION 
+where (ID)%2 = 0 ; 
