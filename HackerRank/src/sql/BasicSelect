@@ -78,3 +78,15 @@ CITY  NOT RLIKE '^[aieou].+'
 select distinct CITY FROM STATION 
 where 
 RIGHT(CITY,1) not in ('a','e','i','o','u');
+
+// Weather Observation Station 11
+
+select DISTINCT CITY FROM STATION
+WHERE
+CITY RLIKE '^[^aieou]' or CITY RLIKE '[^aieou]$' ;
+
+or
+
+select  DISTINCT city from station 
+where 
+left(city,1) not regexp '[aieou]' or right(city,1) not regexp '[aieou]'
