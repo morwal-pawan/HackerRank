@@ -49,3 +49,16 @@ select  count(CITY)- count(distinct CITY) from STATION ;
 select DISTINCT CITY from STATION
 where CITY RLIKE '^[aieou]';
 
+// Weather Observation Station 7
+
+SELECT DISTINCT CITY FROM STATION 
+WHERE
+RIGHT(CITY,1) IN ('a','e','i','o','u');
+
+or 
+
+SELECT DISTINCT CITY FROM STATION 
+WHERE
+RIGHT(CITY,1) Rlike '[aeiou]';
+
+
