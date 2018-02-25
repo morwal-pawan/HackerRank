@@ -67,4 +67,8 @@ SELECT DISTINCT CITY FROM STATION
 WHERE
 CITY RLIKE '^[aieou].*[aieou]$';
 
+// Weather Observation Station 9
 
+select distinct CITY from STATION
+where 
+CITY  NOT RLIKE '^[aieou].+'
