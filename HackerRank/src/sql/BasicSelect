@@ -38,3 +38,8 @@ select CITY, STATE from STATION;
 
 select DISTINCT CITY From STATION 
 where (ID)%2 = 0 ; 
+
+
+// Weather Observation Station 4
+
+select  count(CITY)- count(distinct CITY) from STATION ;
