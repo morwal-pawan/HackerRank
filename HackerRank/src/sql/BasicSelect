@@ -102,3 +102,8 @@ CITY RLIKE '^[^aieou]' and CITY RLIKE '[^aieou]$';
 select name from STUDENTS 
 where MARKS > 75
 order by right(name,3), id ASC;
+
+// Employee Names
+
+select name from Employee 
+order by name ASC
