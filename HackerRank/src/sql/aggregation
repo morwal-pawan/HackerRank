@@ -2,3 +2,10 @@
 
 select COUNT(NAME) from CITY
 where POPULATION > 100000;
+
+
+// Revising Aggregations - The Sum Function
+
+
+select SUM(POPULATION) from CITY
+where DISTRICT = 'California';
