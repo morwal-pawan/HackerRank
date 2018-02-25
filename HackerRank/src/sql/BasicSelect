@@ -96,3 +96,9 @@ left(city,1) not regexp '[aieou]' or right(city,1) not regexp '[aieou]'
 select distinct city from station
 where
 CITY RLIKE '^[^aieou]' and CITY RLIKE '[^aieou]$';
+
+// Higher Than 75 Marks
+
+select name from STUDENTS 
+where MARKS > 75
+order by right(name,3), id ASC;
