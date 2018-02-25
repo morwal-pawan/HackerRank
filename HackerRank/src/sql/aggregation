@@ -29,3 +29,8 @@ where DISTRICT = 'California';
  select if( (avg(POPULATION) - Floor(avg(POPULATION)))>0.5,
  (avg(POPULATION)+1),Floor(avg(POPULATION)))
  from CITY;
+ 
+//  Japan Population
+ 
+SELECT SUM(POPULATION) FROM CITY
+WHERE COUNTRYCODE ='JPN';
