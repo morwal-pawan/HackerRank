@@ -43,3 +43,9 @@ where (ID)%2 = 0 ;
 // Weather Observation Station 4
 
 select  count(CITY)- count(distinct CITY) from STATION ;
+
+// Weather Observation Station 6
+
+select DISTINCT CITY from STATION
+where CITY RLIKE '^[aieou]';
+
