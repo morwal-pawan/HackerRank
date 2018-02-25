@@ -3,3 +3,9 @@
 select * from CITY
 where COUNTRYCODE ='USA' and POPULATION >100000;
 
+
+// Revising the Select Query II
+
+select NAME from CITY 
+where 
+POPULATION > 120000 and COUNTRYCODE  ='USA';
