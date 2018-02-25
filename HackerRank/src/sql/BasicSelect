@@ -18,3 +18,16 @@ select * from CITY;
 
 select * from CITY 
 where ID = 1661;
+
+
+// Japanese Cities' Attributes
+
+select * from CITY
+where COUNTRYCODE = 'JPN';
+
+
+
+
+
+
+
