@@ -17,8 +17,7 @@ public class JavaSort {
 	    String fname = in.next();
 	    double cgpa = in.nextDouble();
 
-	    Student st = new Student(id, fname, cgpa);
-	    studentList.add(st);
+	    studentList.add(new Student(id, fname, cgpa));
 
 	    testCases--;
 	}
