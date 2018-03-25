@@ -22,3 +22,5 @@ select  concat('There are a total of ',count(Occupation),' ',lower(Occupation),'
 GROUP BY Occupation order By count(Occupation) ASC, Occupation ASC ; 
 
 
+
+

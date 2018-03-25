@@ -34,3 +34,12 @@ INNER JOIN
 GRADES G ON S.MARKS BETWEEN MIN_MARK AND MAX_MARK 
 ORDER BY G.GRADE DESC, S.NAME,S.MARKS;
 
+
+// Top Competitors
+
+
+// Ollivander's Inventory
+
+// Challenges
+
+// Contest Leaderboard
