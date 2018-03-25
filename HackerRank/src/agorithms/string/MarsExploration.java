@@ -13,6 +13,7 @@ public class MarsExploration {
 		return true;
 	}
 	
+//	 hi
 	public static  int marsExploration(String str)
 	{
         String sos = "SOS";
