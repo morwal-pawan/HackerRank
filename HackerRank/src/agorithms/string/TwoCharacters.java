@@ -4,70 +4,31 @@ import java.util.Scanner;
 
 public class TwoCharacters {
 
-    public static boolean checkAlter(String str )
-	{	if(str.length() < 2 || str.charAt(0)==str.charAt(1)) return false;
+    static String caesarCipher(String str, int k) {
+        StringBuffer result = new StringBuffer();
+		char ch ;
+		for(int index = 0; index<str.length(); index++)
+		{	 
+			if(str.charAt(index) >='a' && str.charAt(index) <='z' || str.charAt(index) >='A' && str.charAt(index) <='Z')
+			{
+			  if(str.charAt(index) >='a' && str.charAt(index) <='z')
+				  	ch = (char) ('a' + (str.charAt(index) - 'a' + k)%26);
+			  else  ch = (char) ('A' + (str.charAt(index) - 'A' + k)%26);
+			  result.append(ch);  
+			}	
+            else result.append(str.charAt(index));
+		}
+		return result.toString();
+    }
+    
 	
-		char a = str.charAt(0);
-		char b = str.charAt(1);
-		int index;
-		for ( index = 1; index < str.length(); index+=2) {
-			if(str.charAt(index-1) != a || str.charAt(index) !=b)
-				return false;	
-		}
-		if(index==str.length())
-			return (str.charAt(index-3)==str.charAt(index-1));
-		return true;
-	}
-    public static String createString(String str,char a,char b)
-	{
-		StringBuffer sb = new StringBuffer();
-		for (int index = 0; index < str.length(); index++) {
-			if(str.charAt(index)==a)
-				sb.append(a);
-			if(str.charAt(index)==b)
-				sb.append(b);
-				
-		}
-		
-		return sb.toString();
-	}
-    public static String findDiffertChar(String str) {
-		int count[] = new int[265];
-		StringBuffer temp = new StringBuffer();
-		for(int i=0; i<str.length();i++)
-			count[str.charAt(i)]++;
-		
-		for(int i =0;  i< 256; i++)
-			if(count[i]!=0)
-				temp.append((char)i);
-		return temp.toString();
-	}
-	public static int findAlterNoRecur(String str,String chars)
-	{
-		int max=0;
-		for (int index = 0; index < chars.length(); index++) {
-			for (int inner = 0; inner < chars.length(); inner++) {
-				if(chars.charAt(index)!=chars.charAt(inner))
-				{
-					String temp = createString( str,chars.charAt(index),chars.charAt(inner));
-					if(checkAlter(temp) && max < temp.length())
-					{
-						max = temp.length();
-					}
-						
-				}
-			}
-			
-		}
-		return max;
-	}
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int l = in.nextInt();
-        String str = in.next();
-        String chars = findDiffertChar(str);
-        int result = findAlterNoRecur(str,chars);
+        int n = in.nextInt();
+        String s = in.next();
+        int k = in.nextInt();
+        String result = caesarCipher(s, k);
         System.out.println(result);
         in.close();
     }
